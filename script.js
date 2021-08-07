@@ -23,7 +23,7 @@ function createListItem() {
     }
 
     li.addEventListener("click", crossOut)
-
+    //Create Cross button to put inside of list item so we can delete
     let deleteBtn = document.createElement("button")
     deleteBtn.appendChild(document.createTextNode("X"))
     li.appendChild(deleteBtn)
@@ -38,14 +38,14 @@ function createListItem() {
 function addListAfterClick(){
     if (inputLength() > 0) {
         //Make Sure not to create an item with no text
-        createListElement()
+        createListItem()
     }
 }
 
 function addListAfterKeypress(event) {
-    if(inputLength() > 0 && event.which === 13){
+    if(inputLength() > 0 && event.keyCode === 13){
         //13 is keycode for Enter key on keyboard
-        createListElement()
+        createListItem()
     }
 }
 

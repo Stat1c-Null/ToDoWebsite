@@ -1,5 +1,5 @@
 body {
-    background-color: #8A2BE2;
+    background-color: #8A2BE2 !important;/*KeyWord Important Makes your change THE most important*/
     text-align:center;
     font-family: 'Oswald', sans-serif;
 }
@@ -49,6 +49,11 @@ input {
     color: #8a2be2;
 }
 
+.done:hover {
+    background: #c900c9;
+    color: #8400ff;
+}
+
 .delete {
     display: none;
 }
@@ -60,10 +65,13 @@ ul {
 
 li {
     list-style: none;
+    max-width: 60%;
+    margin-left: 15%;
     padding: 10px 20px;
     color: #fff;
     text-transform: capitalize;
     font-weight: 600;
+    font-size: 1.3em;
     border: 2px solid #025f70;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -72,3 +80,19 @@ li {
 }
 
 
+li:hover {
+    background-color: #0482db;
+}
+
+li > button {
+    font-weight: normal;
+    background: none;
+    border: none;
+    float: right; /*Position of the button*/
+    color: rgb(76, 6, 109);
+    font-size: 1.5em;
+}
+
+li > button:hover {
+    color: rgb(152, 12, 218);
+}
